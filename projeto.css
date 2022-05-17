@@ -1,0 +1,169 @@
+
+
+
+
+* { /*para todos*/
+    margin: 0;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    blackground-color: #4682B4;
+    padding: 10px;
+
+}
+
+nav a:visited,
+nav a:link {
+    color: #274360;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+
+body {
+    height: 100%;
+    background: #FAF2E9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+
+main {
+    display: block;
+    padding-top: 6em;
+    padding-bottom: 2em;
+    min-height: 75%;
+}
+
+
+h1 {
+    font-size: 1.5em;
+    font-family: "book a";
+    margin-top: 7.5em;
+    margin-left: 2em;
+}
+.MTC {
+    max-width: 90%;
+}
+h2{
+    font-size: 1em;
+}
+
+footer {
+    padding: 15px;
+}
+
+aside,
+article {
+    padding: 2em;
+}
+
+aside {
+/ / logotipo text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        margin-left: 2%;
+    }
+
+
+}
+
+/*
+
+•
+As marcas CSS usadas nesta página foram:
+.scout: para fixar a posição do "escuteiro", e o tipo de letra do menu abaixo
+                                             .scout a: definição do comportamento das pseudo classes do elemento a
+                                             .scout li: remoção das marcas de li na classe e distanciamento das restantes, para efeito de botões.
+.corpoF: definições para o corpo desta pagina, nomeadamente afastamento da margem e tipo de letra., colocando o corpo numa div (secção)
+•<a name>: uso da marca a, com parâmetro name, para hiperligações para locais específicos no documento.
+• <i> </i>: Em dioceses, para estilo itálico
+
+As marcas CSS usadas nesta página foram:
+
+.<style></style> : Demonstração de 2 nivel da Hierarquia do conceito de herança em CSS - Folha Estilo Interna
+                                                                                         ◦ table.organiza: para controlar a tabela principal onde foi enquadrado todo o conteudo desta pagina
+                                                                                         ◦ body: para definir um novo tipo de letra Comic Sans ou fantasy
+                                                                                         ◦ h1: Títulos na Cor Castanha e sublinhados
+                                                                                         ◦ h3: Botões Verdes, parâmetro display, com letras brancas
+◦ h4: Titulo Azul co, avanço (parâmetro text-indent) de 50px
+                                                          ◦ p: Parágrafo com avanço de 75px
+
+                                                                                         . <iframe></iframe> :utilização da moldura em linha, para utilizar um vídeo alojado no youtube
+• <img>: Inserção do desenho de S. Nuno no bloco Esquerdo
+•<blockquote></blockquote> : Bloco de apresentação do Patrono, onde são citadas diversos aspectos CSS.
+• <span> </span>: Iserção da capitular "S." na primeira frase, quebra da instrução da div superior.
+• <strong> </strong>: Na caixa direita para envolver "São Nuno Santa Maria"
+• <q> </q>:quota= "Se el-rei de Castela mover guerra a Portugal, servirei ao mesmo tempo a religião que professo e a
+terra que me deu o ser."
+
+
+Aplicação prática do tema 10 do capitulo 2 da Bibliografia obrigatória As marcas CSS usadas nesta página foram:
+                                           • blockquote.blocoEsquerda Classe do Bloco de que contem a imagem de S.Nuno:
+                                           ◦ font-size:110%;: Fonte da caixa a 110%
+◦ float:left;: Caixa “flutua” alinhada à esquerda
+             ◦ width: 25%;: Largura da caixa a ocupar 25% do ecrã
+                                                          ◦ padding: 0.5em;: distância do texto às margens da caixa
+                                                                           ◦ margin: 1em 1em 0em 0em;: margem da caixa ao topo, direita, abaixo, esquerda
+◦ text-align:justify;: Alinhamento do Texto
+                     ◦ color:#66FF33;: cor da letra
+                                     ◦ background:#000000; : cor do fundo
+                                                           ◦ border:2px black solid;: limite da caixa
+                                                                                    • #imgSNuno:Selector de ID para a imagem da caixa do topo esquerdo, para o alinhamento e distancia aos restantes
+elementos
+• #Capitular : Definição do alinhamento, dimensão margem, limite e cor da Capitular S. da caixa do topo esquerdo
+• .blocoDireita : Definição da Classe que define o bloco direito, a diferença para a caixa esquerda, está no "float"
+e cores
+• .texto : Classe que define as margens do texto principal e o estilo
+• .video : Classe para alinhar ao centro a apresentação do vídeo.
+• h3.Ho : Títulos O Homem e O Santo,
+• h3.He : Título O Herói
+•<form></form> : criação de formulário com os objectos: caixa de texto e botões de submissão e reinicialização, inclui a capacidade
+de envio para email utilizando o valor mailto no parâmetro action.
+• <input> : define os dados a serem enviados pelo form
+• <b> </b>: a envolver a frase "chegas-te aqui! Queres saber mais?" para a colocar a negrito
+                                                                    • <h2></h2>: titulo de nível 2 colocado a envolver "Valores da Lei, Princípios e Promessa"
+• <div></div>: chamada de class caixa desenvolvida na folha de estilos, que cria a caixa castanha
+• <table></table>:criação de tabela, neste caso cada sub-titulo é uma tabela
+• <tr></tr>: linhas da tabela
+        • <td></td>: Colunas da tabela
+                • <h1></h1>: titulo de nível 1 a envolver "Lei do Escuta"
+• <h3></h3>: titulo de nível 3 a envolver "1.º - A honra do Escuta inspira confiança"
+• <h4></h4>: titulo de nível 4 a envolver ""Prometo pela minha honra e com a graça de Deus fazer todo o possível
+                                            por:""
+• <p></p>: parágrafo a envolver "O grande segredo da Lei ...para o bem dos outros."
+As marcas CSS usadas nesta página foram:
+• body: de modo a colocar um fundo diferente, que neste caso é um trabalho da minha filha :)
+• p, h1, h3, h4: agrupamento de selectores para tipo de letra, seguidamente e individualmente foram tratados, quanto
+à cor e estilos
+• .box: criação de class para colocação de borders nas células escolhidas
+• border:10px maroon dashed; width:640px: no form para definir a caixa do formulário
+*/
