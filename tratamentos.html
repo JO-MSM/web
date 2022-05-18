@@ -6,12 +6,21 @@
     <title>Tratamentos</title>
 
     </head>
+
     <body>
+        <input type-="text" placeholder="Efetue a sua pesquisa" id="texto" class="textocss">
+        <button onclick="minhaFuncao()">Pesquisar</button>
+        <script>
+            function minhaFuncao(){
+                var texto = document.querySelector('.textocss').value;
+                alert(texto);
+            }
+        </script>
     <header>
         <nav>
             <ul>
                 <li><a href="consulta.html"> Consulta de MTC </a></li>
-                <li><a href="areas.html"> Áras Clínicas</a></li>
+                <li><a href="areas.html"> Áreas Clínicas</a></li>
                 <li><a href="tratamentos.html">Tratamentos </a></li>
             </ul>
         </nav>
@@ -22,11 +31,28 @@
             <img src="./imagens/4.png">
             <h1> Tratamentos </h1>
             <p class="sub-title">
-                <h2><p>Consulta de Acupuntura </p>
+                <h2> Consulta de Acupuntura </h2>
+            <p> Essa técnica consiste na inserção de agulhas através da pele com diferentes profundidades
+            e em pontos considerados estratégicos para, com objetivo de promover o tratamento de desequilíbrios energéticos,
+            funcionais e orgânicos.</p>
+            <h2>Consulta de Tui Na</h2>
+            <p>Conhecida como massagem terapêutica procura purificar, tonificar e harmonizar as energias que estão associadas
+                aos órgãos e também promove e melhora a circulação sanguínea.</p>
+            <h2>Consulta Auriculoterapia</h2>
+            <p> A acupuntura auricular atua nos pontos energéticos da orelha, que refletem o funcionamento dos órgãos.
+                Quando estimulados, melhoram o equilíbrio energético do corpo.</p>
+            <h2>Ventosoterapia</h2>
+            <p>Nesta terapia são utilizadas ventosas para melhorar a circulação sanguínea e promover o relaxamento da musculatura.
+                As ventosas criam efeito de vácuo, realizando uma sucção da pele, fazendo com que ocorra aumento do diâmetro dos vasos no local.
+                A aplicação melhora a oxigenação dos tecidos contribuindo para a eliminação de toxinas do sangue e músculos.</p>
+            <h2>Fitoterapia</h2></h2>
+            <p> A fitoterapia é uma prática milenar e utiliza propriedades medicinais das plantas com objetivo de obter
+                benefícios em sintomas, profilaxia, curativo, paliativo e tratamento de doenças. A utilização da fitoterapia
+                promove menos efeitos colaterais, e não causa dependência.</p>
 
-            <p>Consulta de Tui Na</p>
-            <p>Consulta Auriculoterapia</p>
-            <p>Fitoterapia</p></h2>
+            <h2>Consulta Anti-tabágica</h2></h2>
+            <p>Propoe um programa de cessação tabágica, com ajuda de acupuntura e cristais radiônicos.</p>
+
         </article>
     </main>
     <footer>
@@ -44,27 +70,8 @@
 
 
 
-_________________________________________________________________________________________________
-<!--
+
+<!--___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 As marcas HTML usadas nesta página foram:
-
-.<p></p>: representa um parágrafo
-.<h1></h1>: representa o primeiro nivel de titulo de secção
-.<h2></h2>: representa o segundo nivel de titulo de secção
-
-
-. <head></head><title></title>: define o título do documento, mostrado na barra de título de um navegador ou na aba da página
-. <body></body>: corpo de um site
-. <header> cabeçalho dentro das navegação do site
-. <nav> </nav>: epresenta uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja,
-uma seção com links de navegação.
-. <li> usado para representar um item que faz parte de uma lista, que esta contido dentro do elemento pai;
-<ul></ul> lista desordenada
-Neste caso uso para as listas de cabeçalho e de rodapé
-. <main> </main>: conteudo principal
-. <aside> barra lateral para colocar uma imagem no conteudo principal
-. <img src="" alt="">: inserção de imagem no documento alt atributo que define um texto alternativo que descreve a imagem
-. <article> </article>:Representa o ponto central do conteúdo do documento. Neste ponto central apenas inseri uma imagem
-. <footer> </footer>: Representa o rodapé
-
+.<h2></h2>: Representa o segundo nível de importancia de cabeçalho.
 -->

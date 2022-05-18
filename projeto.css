@@ -8,23 +8,17 @@ header {
     display: block;
     /*Posicionamento fixo*/
     position: fixed;
-    /*Ao rolar a página a navegação superior permanece fixa na posição
-    na parte superior do navegador, como queremos nessa posição, adicionamo superior
-    e esquerda. É a regra superior que instrui o navegador a corrigir essa
-    posição na parte superior da janela do navegador, bem como na extremidadade
-    esquerda da janela*/
     top: 0;
     left: 0;
     /*Ocupamos 100% da largura da página, defenimos a cor de fundo e o preenchimento*/
     width: 100%;
     blackground-color: #4682B4;
     padding: 10px;
-
 }
-
-nav a:visited, /*depois do link ter sido visitado, por isso a pseudo
-clsse é um link e usará uma regra chamada text-decoration
-e defenirá como nenhuma. Assim os links não terão sublinado embaixo deles*/
+/*depois do link ter sido visitado, a pseudo
+classe é um link e usará uma regra chamada text-decoration
+e defenirá como nenhuma. Assim os links não terão sublinhado embaixo deles*/
+nav a:visited,
 nav a:link {
     color: #274360;
     text-decoration: none;
@@ -47,23 +41,23 @@ nav > ul > li {
     display: inline-block;
     list-style: none;
     /* O primeiro valor da margem está para o topo, de seguida o valor para inferior
-     e depois para esquerdo*/
+     e depois para esquerda*/
     margin: 0 5px 0 5px;
 }
-
 
 body {
     height: 100%; /* altura de 100%*/
     background: #FAF2E9;  /*cor de fundo*/
     font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
 }
-
-p { /*todos os paragrafos com a mesma margem personalizada
+/*todos os paragrafos com a mesma margem personalizada
 o primeiro valor é a margem para o topo do elemento
 o segundo valor é a margem à direita do elemento
 o terceiro valor para a parte inferior e o último valor para a esquerda.
 Isto adiciona margem superior, inferior a cada um dos parágrafos do site*/
+p {
     margin: 0.5em 0 0.5em 0;
+    text-align: justify;
    /* text-indent: 30px; colocar o inicio do paragrafo mais dentro*/
 }
 
@@ -79,20 +73,36 @@ main {
     min-height: 75%;
 }
 
-/*Ajustes do titulo 1*/
+/*Representa o primeiro nível de importancia de cabeçalho.*/
 h1 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-family: "book a";
-    margin-top: 7.5em;
-    margin-left: 2em;
+    margin-top: 2.5em;
+    margin-left: 1em;
 }
-/*Classe MTC dizendo que o maximo com esse elemento seja 90%*/
-.MTC {
-    max-width: 90%;
-}
+/*Representa o segundo nível de importancia de cabeçalho.*/
 h2{
     font-size: 1em;
     font-family: "fantasy";
+}
+/*Representa o terceiro nível de importancia de cabeçalho.*/
+h3{
+    font-size: 1.7em;
+    font-family: "book a";
+    font-weight: bold;
+    margin-top: 5.5em;
+    margin-left: 4em;
+}
+/*Classe MTC dizendo que o maximo com esse elemento seja 90%*/
+.MTC {
+    max-width: 40%;
+}
+
+.textocss{
+    margin-top: 0.5em;
+    margin-left: 55em;
+    text-align: center;
+
 }
 
 .sub-title{
@@ -105,17 +115,18 @@ footer {
     padding: 15px;
 }
 
-aside,
-article {
-    padding: 2em;
-}
+
 /*Alinhamento do texto*/
 aside {
-/ / logotipo text-align: center;
+//logotipo text-align: center;
 }
 /*defenir a largura desse elemento*/
 article {
+    display: block;
     width: 75%;
+    padding: 2em;
+    text-align: justify;
+    line-height: 1.6em;
 }
 /*Area de trabalho-apenas para tamanhos de tela 768 pixels mais largos e acima*/
 @media only screen and (min-width: 768px) {
@@ -132,80 +143,89 @@ article {
 
 
 }
-
 /*
-_________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________
 As marcas CSS usadas nesta página foram:
 
 .*: atributo para todos(todos os elementos da página), para definir margem igual a zero
 
-.body height: para permitir o ajuste da pagina
-Estas regras dependerão da herança para garantir que todos os outros elementos da página tenham
-.body
-.scout: para fixar a posição do "escuteiro", e o tipo de letra do menu abaixo
-                                             .scout a: definição do comportamento das pseudo classes do elemento a
-                                             .scout li: remoção das marcas de li na classe e distanciamento das restantes, para efeito de botões.
-.corpoF: definições para o corpo desta pagina, nomeadamente afastamento da margem e tipo de letra., colocando o corpo numa div (secção)
-•<a name>: uso da marca a, com parâmetro name, para hiperligações para locais específicos no documento.
-• <i> </i>: Em dioceses, para estilo itálico
-
-As marcas CSS usadas nesta página foram:
-
-.<style></style> : Demonstração de 2 nivel da Hierarquia do conceito de herança em CSS - Folha Estilo Interna
-                                                                                         ◦ table.organiza: para controlar a tabela principal onde foi enquadrado todo o conteudo desta pagina
-                                                                                         ◦ body: para definir um novo tipo de letra Comic Sans ou fantasy
-                                                                                         ◦ h1: Títulos na Cor Castanha e sublinhados
-                                                                                         ◦ h3: Botões Verdes, parâmetro display, com letras brancas
-◦ h4: Titulo Azul co, avanço (parâmetro text-indent) de 50px
-                                                          ◦ p: Parágrafo com avanço de 75px
-
-                                                                                         . <iframe></iframe> :utilização da moldura em linha, para utilizar um vídeo alojado no youtube
-• <img>: Inserção do desenho de S. Nuno no bloco Esquerdo
-•<blockquote></blockquote> : Bloco de apresentação do Patrono, onde são citadas diversos aspectos CSS.
-• <span> </span>: Iserção da capitular "S." na primeira frase, quebra da instrução da div superior.
-• <strong> </strong>: Na caixa direita para envolver "São Nuno Santa Maria"
-• <q> </q>:quota= "Se el-rei de Castela mover guerra a Portugal, servirei ao mesmo tempo a religião que professo e a
-terra que me deu o ser."
+                                                       header display: bloco de exibição no meu caso block
+                                                       header position: posicionamento fixo
+                                                       header top e header left: Ao rolar a página a navegação superior permanece fixa na posição na parte superior do navegador,
+                                                       como queremos nessa posição, adicionar superior e esquerda. É a regra superior que instrui o navegador a corrigir essa
+posição na parte superior da janela do navegador, bem como na extremidadade esquerda da janela
+header width: Ocupamos 100% da largura da página
+                            header blackground-color: defenição da cor de fundo #4682B4;
+header padding: 10px; defenição do preenchimento
 
 
-Aplicação prática do tema 10 do capitulo 2 da Bibliografia obrigatória As marcas CSS usadas nesta página foram:
-                                           • blockquote.blocoEsquerda Classe do Bloco de que contem a imagem de S.Nuno:
-                                           ◦ font-size:110%;: Fonte da caixa a 110%
-◦ float:left;: Caixa “flutua” alinhada à esquerda
-             ◦ width: 25%;: Largura da caixa a ocupar 25% do ecrã
-                                                          ◦ padding: 0.5em;: distância do texto às margens da caixa
-                                                                           ◦ margin: 1em 1em 0em 0em;: margem da caixa ao topo, direita, abaixo, esquerda
-◦ text-align:justify;: Alinhamento do Texto
-                     ◦ color:#66FF33;: cor da letra
-                                     ◦ background:#000000; : cor do fundo
-                                                           ◦ border:2px black solid;: limite da caixa
-                                                                                    • #imgSNuno:Selector de ID para a imagem da caixa do topo esquerdo, para o alinhamento e distancia aos restantes
-elementos
-• #Capitular : Definição do alinhamento, dimensão margem, limite e cor da Capitular S. da caixa do topo esquerdo
-• .blocoDireita : Definição da Classe que define o bloco direito, a diferença para a caixa esquerda, está no "float"
-e cores
-• .texto : Classe que define as margens do texto principal e o estilo
-• .video : Classe para alinhar ao centro a apresentação do vídeo.
-• h3.Ho : Títulos O Homem e O Santo,
-• h3.He : Título O Herói
-•<form></form> : criação de formulário com os objectos: caixa de texto e botões de submissão e reinicialização, inclui a capacidade
-de envio para email utilizando o valor mailto no parâmetro action.
-• <input> : define os dados a serem enviados pelo form
-• <b> </b>: a envolver a frase "chegas-te aqui! Queres saber mais?" para a colocar a negrito
-                                                                    • <h2></h2>: titulo de nível 2 colocado a envolver "Valores da Lei, Princípios e Promessa"
-• <div></div>: chamada de class caixa desenvolvida na folha de estilos, que cria a caixa castanha
-• <table></table>:criação de tabela, neste caso cada sub-titulo é uma tabela
-• <tr></tr>: linhas da tabela
-        • <td></td>: Colunas da tabela
-                • <h1></h1>: titulo de nível 1 a envolver "Lei do Escuta"
-• <h3></h3>: titulo de nível 3 a envolver "1.º - A honra do Escuta inspira confiança"
-• <h4></h4>: titulo de nível 4 a envolver ""Prometo pela minha honra e com a graça de Deus fazer todo o possível
-                                            por:""
-• <p></p>: parágrafo a envolver "O grande segredo da Lei ...para o bem dos outros."
-As marcas CSS usadas nesta página foram:
-• body: de modo a colocar um fundo diferente, que neste caso é um trabalho da minha filha :)
-• p, h1, h3, h4: agrupamento de selectores para tipo de letra, seguidamente e individualmente foram tratados, quanto
-à cor e estilos
-• .box: criação de class para colocação de borders nas células escolhidas
-• border:10px maroon dashed; width:640px: no form para definir a caixa do formulário
+                      Depois do link ter sido visitado, a pseudo classe é um link e usará uma regra chamada text-decoration
+e defenirá como nenhuma. Assim os links não terão sublinhado embaixo deles
+nav a:link {
+                          color: #274360;
+                          text-decoration: none;
+
+Modo como a lista é renderizada na página.
+Informando o navegador para exibir esta lista em linha e zerar o preenchimento
+ao redor da lista
+nav > ul {
+    display: inline;
+    padding: 0;
+
+
+    Regras para a lista, que têm como alvo os itens individuais da lista nessa lista ordenada.
+
+    display: inline-block; Pretende-se que sejam exibidos como no bloco de linhas.
+    list-style: none; definir o estilo da lista como nenhum
+    margin: 0 5px 0 5px; defenição da margens esquerda e direita. O primeiro valor da margem está para o topo,
+de seguida o valor para inferior e depois para esquerda.
+
+
+body height: para permitir o ajuste da pagina 100%
+body background: define cor de fundo; #FAF2E9
+body font-family: define tipo de letra, foi escolhido Arial, Helvetica, sans-serif;
+
+
+    Todos os paragrafos com a mesma margem personalizada o primeiro valor é a margem para o topo do elemento,
+    o segundo valor é a margem à direita do elemento, o terceiro valor para a parte inferior e o último valor para a esquerda.
+    Isto adiciona margem superior, inferior a cada um dos parágrafos do site
+    p
+    margin: 0.5em 0 0.5em 0;
+    text-align: justify;
+
+
+    Seletor de quatro tags principais
+    main
+
+    display: block; Regras para a parte superior e parte inferior. Afastar o conteudo do limite do elemento principal
+para dar espaço para que esses elementos de navegaçao sejam exibos corretamente
+    padding-top: 6em;
+    padding-bottom: 2em;
+    min-height: 75%;Altura minima, para garantir que a navegaçao inferior apareça na parte inferior da pagina
+
+    h1: Representa o primeiro nível de importancia de cabeçalho.
+    font-size: 1.7em; tamanho
+font-family: "book a"; tipo de letra
+    margin-top: 2.5em; margem relativamente ao topo
+    margin-left: 1em; margem relativamente à esquerda
+
+    h2:  font-size: 1em; tamanho
+h2:  font-family: "fantasy"; tipo de letra
+
+    h3: font-weight: bold; negrito
+
+.MTC : Classe MTC dizendo que o maximo com esse elemento seja 90%
+    max-width: 40%; tamanho da imagem
+
+.textocss
+    margin-top: 0.5em; margem do topo
+    margin-left: 55em; margem da esquerda
+    text-align: center; alinhamento
+
+.subtitle
+    font-size: 1.3em; tamanho
+footer: Ao rodapé foi adicionado 15 pixels de preenchimento
+
+    article: text-align: justify; tipo de letra justificado
+
 */
