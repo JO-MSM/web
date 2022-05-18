@@ -45,14 +45,16 @@
         <nav>
             <ul>
                 <li><a href="marcacao.html">Profissionais</a></li>
-                <select onchange="minhaFuncao(this.value)">
-                    <option value="Selecione o profissional."> </option>
-                    <option value="Licenciatura em Medicina Chinesa, Acupuntura e Fitoterapia
-                    Universidade de Medicina Chinesa Zhong Yi Da Xue">
-                        Drª Daniela Maia</option>
-                    <option value="Licenciatura em Medicina Chinesa, Acupuntura e Fitoterapia
-                    Universidade de Medicina Chinesa Zhong Yi Da Xue">Drª Joana Martins</option>
-                </select>
+                <label>
+                    <select onchange="minhaFuncao(this.value)">
+                        <option value="Selecione o profissional."> </option>
+                        <option value="Licenciatura em Medicina Chinesa, Acupuntura e Fitoterapia
+                        Universidade de Medicina Chinesa Zhong Yi Da Xue">
+                            Drª Daniela Maia</option>
+                        <option value="Licenciatura em Medicina Chinesa, Acupuntura e Fitoterapia
+                        Universidade de Medicina Chinesa Zhong Yi Da Xue">Drª Joana Martins</option>
+                    </select>
+                </label>
                 <script>
                     function minhaFuncao(valor){
                         alert(valor)
